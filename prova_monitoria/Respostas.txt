@@ -1,0 +1,81 @@
+------- QUESTÃO 01 - Encapsulamento e Composição
+
+--- Encapsulamento: O conceito de encapsulamento na programação orientada a objeto tem a função de ocultar partes independentes de implementação, permitindo construir partes invisíveis ao mundo exterior e bloqueando o acesso direto entre o usuário e a aplicação, impedindo que fraudulações nos sistemas sejam ações comuns.
+
+Ex.: Um exemplo prático pode ser encontrado em 'exemplo1e5/src/Marca.java'.
+
+O funcionamento de uma pilha em um controle remoto de uma televisão. O usuário não precisa saber como que esse tipo de objeto funciona exatamente por dentro, contanto que, para os controles remotos de televisão, seu tamanho e sua carga de energia interna seja o adequado para a ocasião.
+
+
+--- Composição: Na composição, lembrado na maioria das vezes quando uma classe X "TEM UMA" classe Y, ou seja, uma variável na classe X que seu tipo será declarado como variável do tipo "classe Y", como se fosse uma variável que contém uma extensão criada pelo programador que conterá variáveis e métodos que podem ou não ser usados.
+
+Ex.: Um exemplo prático pode ser encontrado em 'exemplo1e5/src/Sistema.java'.
+
+As informações de uma marca da TV de um controle remoto. No mesmo exemplo do encapsulamento, no código mostrado, as informações da marca foram instanciadas como 'Marca' e depois inseridas como parâmetros no novo instanciamento de controle do tipo 'Sistema'. Quando perguntado sobre o menu do controle, as informações da marca são exibidas.
+
+-------------------------------------------------------------------------------------------------------------------
+
+------- QUESTÃO 02 - Herança e Polimorfismo
+
+--- Herança: A herança em POO permite basear a definição de uma nova classe com características de outra já existente, herdando tanto suas características como seus atributos. 
+
+Ex.: Um exemplo prático pode ser encontrado em 'exemplo2e3e4/src/Aluno.java'.
+
+Uma classe 'Pessoa' pode ser criada inicialmente como base para outras classes que façam sentido terem 'Pessoa' como classe-mãe, já que as filhas irão também herdar seus atributos e características.
+
+
+Polimorfismo:
+Existem 3 tipos:
+--- Sobreposição: Quando algum método que existe em uma classe-mãe é sobreposto nas classes-filhas usando '@Override'. O nome do método deve ser igual, assim como os parâmetros passados nela também devem ser iguais.
+
+Ex.: Um exemplo prático pode ser encontrado em 'exemplo2e3e4/src/Funcionário.java'.
+
+Quando o método 'fazerAniv()' é chamado pelos objetos do tipo 'Aluno' e 'Funcionário', a execução do programa mostra que, mesmo que o nome do método seja igual, sua execução mostrará valores diferentes, pois a sobreposição está sendo aplicada no método da classe 'Funcionário'.
+
+--- Sobrecarga: Quando um método que existe em uma classe pode ou não ser usado mais de uma vez. Diferente do polimorfismo de sobreposição, no polimorfismo de sobrecarga o nome da função deve ser igual também, mas o que vai diferenciar uns dos outros são os parâmetros que serão passados para ela.
+
+Ex.: Um exemplo prático pode ser encontrado em 'exemplo2e3e4/src/Aluno.java'.
+
+Na classe 'Aluno', a função 'entregarAtividade()' foi escrita mais de uma vez, mas com parâmetros diferentes para cada ocasião, e dependendo do parâmetro que for enviado, mais de uma resposta pode ser visualizada. Para a sobrecarga existir, os parâmentros enviados não podem ser do mesmo tipo, ou seja, se já existe um que está recebendo um parâmetro do tipo String, outros parâmetros não podem receber apenas String também.
+
+--- Inclusão: Quando uma lista se comporta de certa forma, ou seja, seu tipo é, por exemplo, de uma classe que foi criada. Nesse sentido, se uma lista for criada e ela é do tipo 'Aluno', só vai poder ser inserido e contido apenas dados de objetos do tipo 'Aluno'.
+
+Ex.: Um exemplo prático pode ser encontrado em 'exemplo2e3e4/src/main.java'.
+
+Na classe principal do programa, é criado uma lista do tipo 'Aluno' que vai conter apenas objetos do tipo 'Aluno', ou seja, mais de um aluno pode ser incluído dentro da lista.
+
+-------------------------------------------------------------------------------------------------------------------
+
+------- QUESTÃO 03 - Classe Abstrata e Interface
+
+--- Classe Abstrata: É uma classe que não pode ser instanciada, ela serve apenas como "progenitora" para outras bases, ou seja, serve apenas como base para a criação de outras classes.
+
+Ex.: Um exemplo prático pode ser encontrado em 'exemplo2e3e4/src/Pessoa.java'.
+
+'Pessoa' está sendo programada como abstrata nesss exemplo de código apenas para meios de explicação, caso sua abstração seja retirada, o código funcionará corretamente, sem nenhum erro.
+
+--- Interface: Um tipo de classe diferente que contém apenas especificações para outras classes, como se fosse um manual que deve conter funções padrões que, quem a implementar, faz com que seja obrigatório a existência das mesmas funções na classe.
+
+Ex.: Um exemplo prático pode ser encontrado em 'exemplo2e3e4/src/Pessoa.java'.
+
+'Pessoa' implementou a classe de interfaces 'Metodos', logo, todas as funções que contém em 'Metodos', também devem conter em 'Pessoa'. Caso todos não sejam implementados, o código poderá não funcionar corretamente.
+
+-------------------------------------------------------------------------------------------------------------------
+
+------- QUESTÃO 04 - Tratamento de Exceções
+
+--- O tratamento de exceções é usado para que erros encontrados durante a execução do programa sejam controlados da forma que o programador queira que ele se comporte, seja exibindo uma mensagem simples ou até mesmo especificar detalhadamente qual foi o erro encontrado e a linha que o mesmo falhou, fazendo assim com que quaisquer erros sejam tratados corretamente.
+
+Ex.: Um exemplo prático pode ser encontrado em 'exemplo2e3e4/src/main.java'.
+
+No caso do exemplo citado, a variável criada dentro do caso de repetição, deveria ter um limite que fosse igual ao tamanho da lista que a mesma irá percorrer, ou seja, a limitação correta que deveria ser usada seria 'listaDeAlunos.size()' ao invés de um valor qualquer, como mencionado no exemplo.
+
+-------------------------------------------------------------------------------------------------------------------
+
+------- QUESTÃO 05 - Teste de Unidade
+
+--- O teste de unidade serve exatamente para que o código que foi escrito seja testado de forma que ele entregue os valores exatos que são esperados pelos programadores. Geralmente é sempre criado um arquivo de teste à parte e sua programação é voltada para que os comandos que o programador inserir retornem valores que os mesmos esperam. Para esses tipos de teste, é recomendado usar o aplicativo JUnit.
+
+Ex.: Um exemplo prático pode ser encontrado em 'exemplo1e5/src/main.java'.
+
+O professor Pablo Roberto permitiu que essa questão não precisasse ser feita com o aplicativo JUnit.
